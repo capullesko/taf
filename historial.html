@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Pedidos -</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;600;900&display=swap">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+         <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">'92 SUMMER TOEI ANIME FAIR</a>
+                <button class="menu-btn" id="menuBtn">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#ESTRENOS">PRÓXIMOS ESTRENOS</a></li>
+                    <li><a href="lugar.html">CÓMO LLEGAR</a></li>
+                    <li><a href="FAQ.html">FAQ/CONTACTO</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li class="disabled"><a href="historial.html">PEDIDOS</a></li> </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="checkout-main">
+        <section class="order-history" id="HISTORIAL">
+            <h1>MIS PEDIDOS</h1>
+            <h2>HISTORIAL DE ÓRDENES</h2>
+            <div class="history-container">
+                <div class="order-card">
+                    <div class="order-header">
+                        <p><strong>Pedido #TAF1992-1002</strong></p>
+                        <p class="status-completed">COMPLETADO</p>
+                        <p class="tot">Total: <span>¥2.700</span></p>
+                        <button class="accordion-toggle" data-target="details-1">VER DETALLES <i
+                                class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="order-details" id="details-1">
+                        <div class="detail-block1">
+                            <h4>ENVÍO</h4>
+                            <p>Enviado el: 12/08/1992</p>
+                            <p>Dirección: ROOM 2902, 29/F., UNITED CENTRE, 95 QUEENSWAY, HONG KONG</p>
+                        </div>
+                        <div class="detail-block2">
+                            <h4 class="pro">PRODUCTOS</h4>
+                            <p class="p-left">Vol. 1 (x1) - ¥1.200</p>
+                            <p class="p-left">Vol. 10 (x1) - ¥1.500</p>
+                        </div>
+                        <a href="tienda.html" class="secondary-button">Volver a Comprar</a>
+                    </div>
+                </div>
+
+                <div class="order-card">
+                    <div class="order-header">
+                        <p><strong>Pedido #TAF1992-74852</strong></p>
+                        <p class="status-pending">EN PROCESO</p>
+                        <p class="tot">Total: <span>¥3.300</span></p>
+                        <button class="accordion-toggle" data-target="details-2">VER DETALLES <i
+                                class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="order-details" id="details-2">
+                        <div class="detail-block1">
+                            <h4>ENVÍO</h4>
+                            <p>Fecha Estimada: 14/08/1992</p>
+                            <p>Dirección: ROOM 2902, 29/F., UNITED CENTRE, 95 QUEENSWAY, HONG KONG</p>
+                        </div>
+                        <div class="detail-block2">
+                            <h4 class="pro">PRODUCTOS</h4>
+                            <p>Vol. 2 (x1) - ¥1.200</p>
+                            <p>Vol. 8 (x1) - ¥900</p>
+                            <p>Vol. 11 (x1) - ¥1.200</p>
+                        </div>
+                        <a href="#" class="secondary-button">Seguimiento de Envío</a>
+                    </div>
+                </div>
+
+                <div class="order-card">
+                    <div class="order-header">
+                        <p><strong>Pedido #TAF1992-9123</strong></p>
+                        <p class="status-cancelled">CANCELADO</p>
+                        <p class="tot">Total: <span>¥8.400</span></p>
+                        <button class="accordion-toggle" data-target="details-3">VER DETALLES <i
+                                class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="order-details" id="details-3">
+                        <div class="detail-block1">
+                            <h4>RAZÓN</h4>
+                            <p>Producto sin stock disponible.</p>
+                        </div>
+                        <div class="detail-block2">
+                            <h4>PRODUCTOS</h4>
+                            <p>Vol. 3 (x1) - ¥1.200</p>
+                            <p>Vol. 4 (x1) - ¥1.200</p>
+                            <p>Vol. 5 (x1) - ¥1.200</p>
+                            <p>Vol. 6 (x1) - ¥1.200</p>
+                            <p>Vol. 7 (x1) - ¥1.200</p>
+                            <p>Vol. 9 (x1) - ¥1.200</p>
+                            <p>Vol. 12 (x1) - ¥1.200</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-desktop">
+            <div class="foot-1">
+                <p>Tel.: 03-3535-4741</p>
+                <a href="http://toeitheaters.com/theaters/marunouchi/">http://toeitheaters.com/theaters/marunouchi/</a>
+            </div>
+            <div class="foot-2">
+                <a href="/index.html"><img src="img/01_logo.webp" alt="Logo de '92 Toei Anime Fair"
+                        title="Click para volver"></a>
+                <p>© 1992 TOEI ANIME FAIR. ALL RIGHTS RESERVED. COPYRIGHTS | PRIVACY POLICY</p>
+            </div>
+            <div class="foot-3">
+                <a class="redes" href="https://x.com/ToeiAnimationLA/"><img src="img/09_X.svg" alt="Ícono de X"
+                        title="Ir a X"></a>
+                <a class="redes" href="https://www.facebook.com/ToeiAnimationLATAM"><img src="img/07_Facebook.svg"
+                        alt="Ícono de Facebook" title="Ir a Facebook"></a>
+                <a class="redes" href="https://www.instagram.com/toeianimationlatam/"><img src="img/08_Instagram.svg"
+                        alt="Ícono de Instagram" title="Ir a Instagram"></a>
+            </div>
+        </div>
+        <div class="foot-tablet">
+            <div class="foot-2">
+                <a href="/index.html"><img src="img/01_logo.webp" alt="Logo de '92 Toei Anime Fair"
+                        title="Click para volver"></a>
+                <p>© 1992 TOEI ANIME FAIR. ALL RIGHTS RESERVED. COPYRIGHTS | PRIVACY POLICY</p>
+            </div>
+            <div class="foot-1">
+                <div class="foot-3">
+                    <a class="redes" href="https://x.com/ToeiAnimationLA/"><img src="img/09_X.svg" alt="Ícono de X"
+                            title="Ir a X"></a>
+                    <a class="redes" href="https://www.facebook.com/ToeiAnimationLATAM"><img src="img/07_Facebook.svg"
+                            alt="Ícono de Facebook" title="Ir a Facebook"></a>
+                    <a class="redes" href="https://www.instagram.com/toeianimationlatam/"><img
+                            src="img/08_Instagram.svg" alt="Ícono de Instagram" title="Ir a Instagram"></a>
+                </div>
+                <p>Tel.: 03-3535-4741</p>
+                <a href="http://toeitheaters.com/theaters/marunouchi/">http://toeitheaters.com/theaters/marunouchi/</a>
+            </div>
+        </div>
+        <div class="foot-mobile">
+            <div class="foot-1">
+                <div class="foot-3">
+                    <a class="redes" href="https://x.com/ToeiAnimationLA/"><img src="img/09_X.svg" alt="Ícono de X"
+                            title="Ir a X"></a>
+                    <a class="redes" href="https://www.facebook.com/ToeiAnimationLATAM"><img src="img/07_Facebook.svg"
+                            alt="Ícono de Facebook" title="Ir a Facebook"></a>
+                    <a class="redes" href="https://www.instagram.com/toeianimationlatam/"><img
+                            src="img/08_Instagram.svg" alt="Ícono de Instagram" title="Ir a Instagram"></a>
+                </div>
+                <p>Tel.: 03-3535-4741</p>
+                <a href="http://toeitheaters.com/theaters/marunouchi/">http://toeitheaters.com/theaters/marunouchi/</a>
+            </div>
+            <div class="foot-2">
+                <a href="/index.html"><img src="img/01_logo.webp" alt="Logo de '92 Toei Anime Fair"
+                        title="Click para volver"></a>
+                <p>© 1992 TOEI ANIME FAIR. ALL RIGHTS RESERVED. COPYRIGHTS | PRIVACY POLICY</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
