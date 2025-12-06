@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Finalizar Compra </title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;600;900&display=swap">
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">'92 SUMMER TOEI ANIME FAIR</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="tienda.html">TIENDA</a></li>
+                    <li><a href="historial.html">PEDIDOS</a></li>
+                    <li><a href="FAQ.html">CONTACTO</a></li>
+                </ul>
+                <button class="menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="checkout-main">
+        <section class="checkout-pasos">
+            <h1>CHECKOUT</h1>
+            <h2>FINALIZA TU PEDIDO</h2>
+            <div class="alt-step">
+                <div class="step-indicator">
+                    <div class="step active" id="indicator-1"><span>1</span> Logueo</div>
+                    <div class="step" id="indicator-2"><span>2</span> Contacto</div>
+                    <div class="step" id="indicator-3"><span>3</span> Dirección</div>
+                    <div class="step" id="indicator-4"><span>4</span> Pago</div>
+                    <div class="step" id="indicator-5"><span>5</span> Revisar</div>
+                </div>
+            </div>
+            <div class="order-summary-card hidden">
+                <h3>RESUMEN DEL PEDIDO</h3>
+                <div class="item-list">
+                    <p><strong>Vol. 2</strong> (x1) - <span class="price">¥1.200</span></p>
+                    <p><strong>Vol. 8</strong> (x1) - <span class="price">¥900</span></p>
+                    <p><strong>Vol. 11</strong> (x1) - <span class="price">¥1.200</span></p>
+                </div>
+                <div class="total-line">
+                    <p>Subtotal:</p>
+                    <p>¥3.300</p>
+                </div>
+                <div class="total-line">
+                    <p>Envío (Express):</p>
+                    <p>¥1.700</p>
+                </div>
+                <div class="total-line total-final">
+                    <p><strong>TOTAL A PAGAR:</strong></p>
+                    <p><strong>¥5.000</strong></p>
+                </div>
+            </div>
+
+            <div class="checkout-card" id="step-1">
+                <div class="checkout-content">
+                    <h3>1. INICIAR SESIÓN<br> O CONTINUAR COMO INVITADO</h3>
+                    <div class="auth-options">
+                        <div class="login-section">
+                            <h4>USUARIO REGISTRADO</h4>
+                            <p>Si ya tienes una cuenta, inicia sesión para usar tus datos guardados.</p>
+                            <div class="form-group">
+                                <label for="login-correo">Correo Electrónico</label>
+                                <input type="email" id="login-correo" placeholder="Tu correo">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-pass">Contraseña</label>
+                                <input type="password" id="login-pass" placeholder="Tu contraseña">
+                            </div>
+                            <button class="cta-button" onclick="loginAndContinue()">INICIAR SESIÓN</button>
+                        </div>
+
+                        <div class="divider">
+                            <span>O</span>
+                        </div>
+
+                        <div class="guest-section">
+                            <h4>COMPRAR COMO INVITADO</h4>
+                            <p>Continúa sin registrarte. Deberás ingresar la información de envío.</p>
+                            <button class="secondary-button" onclick="nextStep(2)">CONTINUAR COMO INVITADO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-card hidden" id="step-2">
+                <div class="checkout-content">
+                    <h3>2. INFORMACIÓN DE CONTACTO</h3>
+                    <div class="form-group">
+                        <label for="contact-nombre">Nombre Completo</label>
+                        <input type="text" id="contact-nombre" placeholder="Introduce tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-correo">Correo Electrónico</label>
+                        <input type="email" id="contact-correo" placeholder="Introduce tu correo" required>
+                    </div>
+                    <p class="warning-text">Tu correo será usado para enviar la confirmación del pedido.</p>
+                    <div class="actions">
+                        <button class="secondary-button2" onclick="prevStep(1)">VOLVER A LOGUEO</button>
+                        <button class="cta-button2" onclick="nextStep(3)">CONTINUAR A ENVÍO</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-card hidden" id="step-3">
+                <div class="checkout-content">
+                    <h3>3. DIRECCIÓN Y MÉTODO DE ENVÍO</h3>
+                    <div class="form-group">
+                        <label for="direccion">Dirección de Envío</label>
+                        <input type="text" id="direccion" placeholder="Calle, número, departamento" required>
+                    </div>
+                    <div class="card-row">
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad" placeholder="Ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pais">País</label>
+                            <input type="text" id="pais" placeholder="País" required>
+                        </div>
+                    </div>
+
+                    <div class="shipping-options">
+                        <h4>OPCIONES DE ENVÍO</h4>
+                        <label class="radio-label active-method">
+                            <input type="radio" name="shipping" value="express" checked>
+                            Envío Express (1-2 días) - **¥1.700**
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="shipping" value="standard">
+                            Envío Estándar (5-7 días) - **¥800**
+                        </label>
+                    </div>
+
+                    <div class="actions">
+                        <button class="secondary-button2" onclick="prevStep(2)">VOLVER A CONTACTO</button>
+                        <button class="cta-button2" onclick="nextStep(4)">CONTINUAR AL PAGO</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-card hidden" id="step-4">
+                <div class="checkout-content">
+                    <h3>4. INFORMACIÓN DE PAGO</h3>
+                    <div class="payment-methods">
+                        <div class="card-details">
+                            <div class="form-group">
+                                <label for="card-number">Número de Tarjeta</label>
+                                <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required
+                                    maxlength="16" inputmode="numeric">
+                            </div>
+                            <div class="card-row">
+                                <div class="form-group">
+                                    <label for="expiry">Fecha Exp.</label>
+                                    <input type="text" id="expiry" placeholder="MM/AA" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" required>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>MÉTODO DE PAGO</h4>
+                        <div class="method-select">
+                            <div class="radio-label active-method">
+                                <label class="radio-label">
+                                    <input type="radio" name="payment" value="bank">
+                                    Transferencia Bancaria
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    Tarjeta de Crédito/Débito
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="payment" value="paypal">
+                                    PayPal
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button class="secondary-button2" onclick="prevStep(3)">VOLVER A ENVÍO</button>
+                        <button class="cta-button2" onclick="nextStep(5)">REVISAR PEDIDO</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-card hidden" id="step-5">
+                <div class="checkout-content">
+                    <h3>5. REVISAR Y CONFIRMAR</h3>
+                    <div class="confirmation-details">
+                        <h4>DETALLE DE ENVÍO:</h4>
+                        <p id="conf-nombre">Nombre: <strong>[Nombre de Prueba]</strong></p>
+                        <p id="conf-direccion">Dirección: <strong>[Dirección de Prueba]</strong></p>
+                        <p id="conf-envio">Método de Envío: <strong>[Express - $15.00 USD]</strong></p>
+                        <h4>MÉTODO DE PAGO:</h4>
+                        <p id="conf-pago">Método de Pago: <strong>[Tarjeta (Terminada en XXXX)]</strong></p>
+
+                        <div class="total-final-review">
+                            <p><strong>TOTAL A PAGAR:</strong></p>
+                            <p id="conf-total"><strong>¥5.000</strong></p>
+                        </div>
+
+                        <p class="warning-text">Al hacer clic en "FINALIZAR COMPRA", confirmas el pedido y autorizas el
+                            pago.</p>
+                    </div>
+                    <div class="actions">
+                        <button class="secondary-button2" onclick="prevStep(4)">VOLVER A PAGO</button>
+                        <button class="cta-button2" onclick="finalizeOrder()">FINALIZAR COMPRA</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-card hidden final-message" id="step-6">
+                <div class="checkout-content">
+                    <h3>¡PEDIDO PROCESADO CON ÉXITO!</h3>
+                    <p>Tu pedido ha sido procesado y se ha enviado una confirmación a tu correo electrónico.</p>
+                    <p>¡Gracias por tu compra en '92 SUMMER TOEI ANIME FAIR!</p>
+                    <div class="actions" style="justify-content: center; border-top: none;">
+                        <button class="cta-button2" onclick="window.location.href='index.html'">VOLVER AL
+                            INICIO</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="foot-desktop">
+            <div class="foot-1">
+                <p>Tel.: 03-3535-4741</p>
+                <a href="http://toeitheaters.com/theaters/marunouchi/">http://toeitheaters.com/theaters/marunouchi/</a>
+            </div>
+            <div class="foot-2">
+                <a href="/index.html"><img src="img/01_logo.webp" alt="Logo de '92 Toei Anime Fair"
+                        title="Click para volver"></a>
+                <p>© 1992 TOEI ANIME FAIR. ALL RIGHTS RESERVED. COPYRIGHTS | PRIVACY POLICY</p>
+            </div>
+            <div class="foot-3">
+                <a class="redes" href="https://x.com/ToeiAnimationLA/"><img src="img/09_X.svg" alt="Ícono de X"
+                        title="Ir a X"></a>
+                <a class="redes" href="https://www.facebook.com/ToeiAnimationLATAM"><img src="img/07_Facebook.svg"
+                        alt="Ícono de Facebook" title="Ir a Facebook"></a>
+                <a class="redes" href="https://www.instagram.com/toeianimationlatam/"><img src="img/08_Instagram.svg"
+                        alt="Ícono de Instagram" title="Ir a Instagram"></a>
+            </div>
+        </div>
+        <div class="foot-tablet">
+            <div class="foot-2">
+                <a href="/index.html"><img src="img/01_logo.webp" alt="Logo de '92 Toei Anime Fair"
+                        title="Click para volver"></a>
+                <p>© 1992 TOEI ANIME FAIR. ALL RIGHTS RESERVED. COPYRIGHTS | PRIVACY POLICY</p>
+            </div>
+            <div class="foot-1">
+                <div class="foot-3">
+                    <a class="redes" href="https://x.com/ToeiAnimationLA/"><img src="img/09_X.svg" alt="Ícono de X"
+                            title="Ir a X"></a>
+                    <a class="redes" href="https://www.facebook.com/ToeiAnimationLATAM"><img src="img/07_Facebook.svg"
+                            alt="Ícono de Facebook" title="Ir a Facebook"></a>
+                    <a class="redes" href="https://www.instagram.com/toeianimationlatam/"><img
+                            src="img/08_Instagram.svg" alt="Ícono de Instagram" title="Ir a Instagram"></a>
+                </div>
+                <p>Tel.: 03-3535-4741</p>
+                <a href="http://toeitheaters.com/theaters/marunouchi/">http://toeitheaters.com/theaters/marunouchi/</a>
+            </div>
+        </div>
+        <div class="foot-mobile">
+            <div class="foot-1">
+                <div class="foot-3">
+                    <a class="redes" href="https://x.com/ToeiAnimationLA/"><img src="img/09_X.svg" alt="Ícono de X"
+                            title="Ir a X"></a>
+                    <a class="redes" href="https://www.facebook.com/ToeiAnimationLATAM"><img src="img/07_Facebook.svg"
+                            alt="Ícono de Facebook" title="Ir a Facebook"></a>
+                    <a class="redes" href="https://www.instagram.com/toeianimationlatam/"><img
+                            src="img/08_Instagram.svg" alt="Ícono de Instagram" title="Ir a Instagram"></a>
+                </div>
+                <p>Tel.: 03-3535-4741</p>
+                <a href="http://toeitheaters.com/theaters/marunouchi/">http://toeitheaters.com/theaters/marunouchi/</a>
+            </div>
+            <div class="foot-2">
+                <a href="/index.html"><img src="img/01_logo.webp" alt="Logo de '92 Toei Anime Fair"
+                        title="Click para volver"></a>
+                <p>© 1992 TOEI ANIME FAIR. ALL RIGHTS RESERVED. COPYRIGHTS | PRIVACY POLICY</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
