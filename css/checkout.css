@@ -1,0 +1,768 @@
+.checkout-main {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 6rem;
+    color: white;
+    text-align: center;
+}
+
+.checkout-main h1 {
+    font-size: 6rem;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.checkout-main h2 {
+    font-size: 2rem;
+    letter-spacing: 8px;
+    line-height: 0rem;
+    color: #db3738;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.checkout-main hr {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(20, 20, 20, 0), #eadbae, rgba(20, 20, 20, 0));
+}
+
+/* ------------------------------------------------------ PASARELA DE PAGO */
+
+.checkout-pasos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.alt-step {
+    padding-bottom: 0rem;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    gap: 0.5rem;
+}
+
+.step {
+    flex-basis: 18%;
+    padding: 10px 0;
+    border-bottom: 3px solid #131313;
+    color: gray;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.step span {
+    display: inline-block;
+    background-color: #131313;
+    color: #eadbae;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 5px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2rem;
+}
+
+.step.active {
+    border-bottom: 3px solid #db3738;
+    color: #eadbae;
+}
+
+.step.active span {
+    background-color: #db3738;
+    color: white;
+}
+
+.checkout-card {
+    background-color: #131313;
+    border: 2px solid #eadbae;
+    border-radius: 12px;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(234, 219, 174, 0.1);
+}
+
+.checkout-card.final-message {
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+.checkout-content {
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+/* --- CORRECCIÓN SOLICITADA: Centrado de contenido en el mensaje final (Step 6) --- */
+
+.final-message .checkout-content {
+    text-align: center !important;
+}
+
+.final-message .checkout-content h3 {
+    text-align: center !important;
+    color: #db3738;
+}
+
+.final-message .checkout-content p {
+    text-align: center !important;
+    color: #eadbae !important;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.final-message .actions {
+    justify-content: center !important;
+    border-top: none !important;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+
+.checkout-content .payment-methods h4 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    text-align: left;
+}
+
+.method-select {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.shipping-options {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.shipping-options h4 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.shipping-options label {
+    display: block;
+}
+
+.radio-label {
+    display: block;
+    padding-right: 0rem;
+    list-style-type: none;
+}
+
+.checkout-content h3 {
+    color: #eadbae;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(234, 219, 174, 0.3);
+    padding-bottom: 1rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #db3738;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eadbae;
+    border-radius: 5px;
+    background-color: white;
+    color: #131313;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(234, 219, 174, 0.3);
+    padding-top: 1.5rem;
+}
+
+.cta-button {
+    background-color: #db3738;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.secondary-button {
+    padding: 0.2rem;
+}
+
+.cta-button2 {
+    background-color: #db3738;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    width: 80%;
+}
+
+.secondary-button2 {
+    background-color: #ffffff;
+    color: #131313;
+    padding: 0.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    width: 20%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.login-section p,
+.guest-section p {
+    color: #eadbae;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.login-section h4 {
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+
+.guest-section h4 {
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+
+.warning-text {
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 2rem;
+    font-size: 1rem !important;
+    text-align: left;
+    width: 100%;
+}
+
+/* Resumen de Pedido */
+.order-summary-card {
+    background-color: #1f1f1f;
+    border: 1px solid #db3738;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.order-summary-card h3 {
+    color: #db3738;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    border-bottom: 1px dashed rgba(219, 55, 56, 0.5);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.order-summary-card .item-list p {
+    color: #bdbdbd;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: start;
+}
+
+.order-summary-card .item-list strong {
+    font-weight: 200;
+}
+
+.order-summary-card .item-list .price {
+    color: #bdbdbd;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.item-list strong {
+    color: #eadbae;
+}
+
+.order-summary-card .total-line {
+    font-size: 1rem;
+    color: #bdbdbd;
+}
+
+.total-line p {
+    width: 100%;
+}
+
+.order-summary-card .total-line p {
+    margin: 0.3rem 0;
+}
+
+.order-summary-card .total-final {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #db3738;
+}
+
+.order-summary-card .total-final p {
+    font-size: 1rem;
+    color: #eadbae;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+/* -----------------------------------------------------Paso 5: Confirmación */
+
+.confirmation-details p {
+    text-align: start;
+    color: #eadbae;
+    font-weight: 300;
+    width: 100%;
+}
+
+.confirmation-details strong {
+    color: #bdbdbd;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.confirmation-details h4 {
+    color: #db3738;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px dashed rgba(219, 55, 56, 0.5);
+    width: 60%;
+    max-width: 300px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.total-final-review {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #db3738;
+}
+
+.total-final-review p {
+    font-size: 1.4rem;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.total-final-review strong {
+    font-size: 1.5rem;
+}
+
+/* ------------------------------------------------------ LAYOUT UNA COLUMNA (STEP 5 DESKTOP) */
+
+.checkout-pasos.step-5-active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+.checkout-pasos.step-5-active .order-summary-card {
+    width: 80%;
+    margin-bottom: 2rem;
+    order: initial;
+}
+
+.checkout-pasos.step-5-active #step-5 {
+    width: 80%;
+    order: initial;
+}
+
+.checkout-pasos.step-5-active .step-indicator {
+    width: 100%;
+    margin: 0 auto 3rem auto;
+    order: initial;
+}
+
+/* ------------------------------------------------------ HISTORIAL DE ÓRDENES (Caja principal y tarjetas) */
+
+.order-header strong {
+    color: #eadbae;
+    font-size: 1.3rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
+
+.order-header p {
+    font-size: 2rem;
+    margin: 0.25rem 0;
+}
+
+.order-header span {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.order-header .tot {
+    padding-bottom: 1rem;
+}
+
+.detail-block1 {
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.detail-block2 {
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.detail-block1 h4 {
+    color: #ffffff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.detail-block2 h4 {
+    color: #ffffff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.detail-block1 p {
+    width: 100%;
+    text-align: left;
+}
+
+.detail-block2 p {
+    width: 100%;
+    text-align: left;
+}
+
+.detail-block .order-history {
+    text-align: center;
+    padding-bottom: 6rem;
+}
+
+.history-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #1f1f1f;
+    border: 2px solid #eadbae;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 4.8rem;
+}
+
+.order-card {
+    background-color: #131313;
+    border: 1px solid #db3738;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.order-card:hover {
+    background-color: #2a2a2a;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #db3738;
+    font-family: "Roboto Condensed", sans-serif;
+    flex-wrap: wrap;
+}
+
+.order-header .status-completed {
+    color: #eadbae;
+    text-align: right;
+}
+
+.order-header .status-pending {
+    color: #eadbae;
+    text-align: right;
+}
+
+.order-header .status-cancelled {
+    color: #db3738;
+    text-align: right;
+}
+
+.accordion-toggle {
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.order-details {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.3s ease;
+    border-top: 1px dashed rgba(234, 219, 174, 0.3);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-details h4 {
+    color: #eadbae;
+}
+
+.order-details a {
+    font-size: 2rem;
+    width: 30%;
+    text-decoration: none;
+    background-color: #eadbae;
+    color: #131313;
+    padding: 1% 2%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/*************************************************________TABLET________***************************************************/
+
+@media (max-width: 993px) {
+
+    .checkout-main {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+    .checkout-main h1 {
+        font-size: 5rem;
+        letter-spacing: 5px;
+    }
+
+    .checkout-main h2 {
+        font-size: 2rem;
+        letter-spacing: 12px;
+    }
+
+    .checkout-pasos {
+        padding-bottom: 2rem;
+    }
+
+    .step-indicator {
+        width: 95%;
+    }
+
+    .checkout-card,
+    .order-summary-card {
+        width: 100%;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .history-container {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .order-header p {
+        width: 100%;
+    }
+
+    .order-header .status-completed {
+        text-align: center;
+    }
+
+    .order-header .status-pending {
+        text-align: center;
+    }
+
+    .order-header .status-cancelled {
+        text-align: center;
+    }
+
+    .order-header .status {
+        align-self: flex-end;
+        position: relative;
+        top: 0px;
+    }
+
+    .order-details {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .order-details a {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .detail-block {
+        flex-basis: 100%;
+    }
+
+    .detail-block1,
+    .detail-block2 {
+        width: 80%;
+    }
+}
+
+/*************************************************________MOBILE________***************************************************/
+
+@media (max-width: 430px) {
+    .checkout-main {
+        padding-bottom: 0rem;
+    }
+
+    .order-history {
+        width: 100%;
+    }
+
+    .checkout-main h1 {
+        font-size: 4rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .checkout-main h2 {
+        font-size: 1.5rem;
+        letter-spacing: 6px;
+        margin-bottom: 0rem;
+    }
+
+    .checkout-main h3 {
+        font-size: 2rem;
+    }
+
+    .checkout-pasos {
+        display: block;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .step-indicator {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 430px;
+    }
+
+    .alt-step {
+        display: flex;
+        height: 7rem;
+    }
+
+    .step {
+        flex-basis: 10%;
+        font-size: 0.5rem;
+        padding: 0rem;
+    }
+
+    .checkout-card,
+    .order-summary-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .checkout-content {
+        padding: 0 0;
+    }
+
+    .history-container {
+        padding: 10px;
+        border-width: 1px;
+    }
+
+    .order-header strong {
+        font-size: 1.1rem;
+    }
+
+    .order-header .status {
+        top: 0px;
+        font-size: 0.8rem;
+    }
+
+    .checkout-pasos.step-5-active {
+        display: block;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: flex-start;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+}
